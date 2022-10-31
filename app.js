@@ -38,7 +38,7 @@ mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology:true },
   function(err,res){
     try {
       console.log('Connrcted to Database')
-      app.listen(635fc859686fae323d84a25c--mahsalib.netlify.app)
+      app.listen(4000)
     } catch (error) {
       throw error
     }
