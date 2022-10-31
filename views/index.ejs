@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="/css/font.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="homesection">
+      <div class="headerproducts">
+        <header>
+            <%- include('../component/nav.ejs') %> 
+        </header>
+    </div>
+        <div class="mainphotoshow">
+            <div class="mainphoto-text">
+                <h1>WELLCOME TO<span>Mahsa E-Libarary</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium iste voluptatum perferendis rem quibusdam. Iusto culpa nobis doloremque ullam voluptas, dolor minima aperiam, officia sunt pariatur iste, quasi commodi et!</p>
+                <% if(user){%>
+                    <h5><%= user.name %> </h5>
+                    <a href="/Book"><button>Discover Books</button></a>
+                  <%}else{%>
+                    <a href="/login"><button>Login Now</button></a>
+                  <%} %> 
+            </div>
+            <div class="coffe_main">
+                <img src="img/m1.png" id="main_img" alt="">
+            </div>
+        </div>
+        <div class="feature">
+            <div class="profile-info">
+                <div class="profile-main-overview">
+             <div class="profile-overview-circles">
+                    <div class="overview-circle">
+                        <img src="/img/m1.png" alt="">
+                    </div>
+                    <div class="overview-circle">
+                        <img src="/img/m2.png" alt="">
+                    </div>
+                    <div class="overview-circle">
+                        <img src="/img/m3.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="promot">
+        <div class="rightpromot">
+            <h1>Discover Your Book</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam mollitia odio a sed, dignissimos ab neque placeat vero consequuntur blanditiis voluptatibus culpa asperiores at minus, quas dolorem aspernatur magni architecto.</p>
+        </div>
+            <div class="slideshow-cont">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlidey fadeo">
+          <img src="img/s1.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlidey fadeo">
+          <img src="img/s2.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlidey fadeo">
+          <img src="img/s3.jpg" style="width:100%">
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+    <div class="ourmade">
+        <div class="ourmade_left">
+            <div class="ourmade_img">
+                <img src="/img/don2.png" alt="">
+            </div>
+            <div class="ourmade_text">
+                <h2>Request Books</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum inventore culpa doloremque ad, voluptas alias. Eius vitae dolorem voluptatem ab laboriosam tempora veniam sed repellendus, saepe est! Sed, porro hic!</p>
+                <button>CheckOut</button>
+            </div>
+        </div>
+        <div class="ourmade_right">
+            <div class="ourmade_img">
+                <img src="/img/search.png" alt="">
+            </div>
+            <div class="ourmade_text">
+                <h2>Fast Search</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum inventore culpa doloremque ad, voluptas alias. Eius vitae dolorem voluptatem ab laboriosam tempora veniam sed repellendus, saepe est! Sed, porro hic!</p>
+                <button>CheckOut</button>
+            </div>
+        </div>
+        <div class="ourmade_left">
+          <div class="ourmade_img">
+              <img src="/img/download.png" alt="">
+          </div>
+          <div class="ourmade_text">
+              <h2>Download Books</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum inventore culpa doloremque ad, voluptas alias. Eius vitae dolorem voluptatem ab laboriosam tempora veniam sed repellendus, saepe est! Sed, porro hic!</p>
+              <button>CheckOut</button>
+          </div>
+      </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="left section">
+                <h2>About Us</h2>
+                <div class="content">
+                    <p>MultiWebPress is a educational blog where we post blogs related to Website Development, Technology, Tips & Hacks and much more creative coding stuff.</p>
+                <div class="social">
+                    <a href="https://multiwebpress.com"><span class="fa fa-facebook-f"></span></a>
+                    <a href="https://instagram.com/multiwebpress"><span class="fa fa-instagram"></span></a>
+                    <a href="https://www.youtube.com/channel/UCvB-4cVzkhvu4TkTy1hs9zA"><span class="fa fa-youtube"></span></a>
+                </div>
+                </div>
+            </div>
+
+            <div class="center section">
+                <h2>Contact Us</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fa fa-map-marker"></span>
+                        <span class="text"> New York, USA</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fa fa-phone"></span>
+                        <span class="text"> 0976543210</span>
+                    </div>
+                    <div class="email">
+                        <span class="fa fa-envelope"></span>
+                        <span class="text"> Mehsa.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right section">
+                <h2>Subscribe</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email*</div>
+                        </div>
+                        <input type="email" required>
+                        <div class="btn">
+                            <button type="submit">SUBSCRIBE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+        </div>
+    </footer>
+    <div class="blackcover"></div>
+</body>
+
+<script src="/show.js"></script>
+<script src="/ho.js"></script>
+<script>
+</script>
+</html>

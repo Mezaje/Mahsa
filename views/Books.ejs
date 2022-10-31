@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="/css/font.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="maincont">
+    <div class="productcart">
+        <!-- <div class="ProductsDetails">
+            <a class="close" id="close">x</a>
+            <div class="theCartaddress">
+                <h1>Your Cart: <i class="fa-solid fa-cart-shopping"></i></h1>
+            </div>
+            <div class="productsofcart">
+                <div class="ProductsDetailscontent_cart">
+                    <div class="leftsidecart">
+                        <img src="/imgs/c4.png" alt="">
+                    </div>
+                    <div class="rightside">
+                        <div class="productname">
+                            <h1>BLack Coffee</h1>
+                        </div>
+                        <div class="theqty">
+                            <button>+</button>
+                            <h2>1</h2>
+                            <button>-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="fullprice">
+                <div id="fullprice">
+                </div>
+                <span>$</span>
+            </ul>
+            <div class="sumbit">
+                <button>Buy Now</button>
+                <a href="" id="clear"><button>Clear</button></a>
+            </div>
+        </div> -->
+    </div>
+    <div class="headerproducts">
+        <header>
+            <%- include('../component/nav.ejs') %> 
+        </header>
+    </div>
+    <div class="fillter_section">
+        <div class="thefillter">
+            <div class="thefillter_option">
+                <select name="" id="select">
+                    <% cat.forEach((val)=> {%> 
+                        <option value=<%= val.name %> ><%= val.name %> </option>
+                    <% }) %> 
+                </select>
+            </div>
+            <div class="filltersearch">
+                <i class="fa fa-search"></i>
+                <input type="text" id="search">
+            </div>
+            <a href="" id="searchbutton"><button>Search</button></a>
+        </div>
+    </div>
+    <div class="theproducts">
+        <div class="productscollections">
+            <div class="loader"></div> 
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="left section">
+                <h2>About Us</h2>
+                <div class="content">
+                    <p>MultiWebPress is a educational blog where we post blogs related to Website Development, Technology, Tips & Hacks and much more creative coding stuff.</p>
+                <div class="social">
+                    <a href="https://multiwebpress.com"><span class="fa fa-facebook"></span></a>
+                    <a href="https://instagram.com/multiwebpress"><span class="fa fa-instagram"></span></a>
+                    <a href="https://www.youtube.com/channel/UCvB-4cVzkhvu4TkTy1hs9zA"><span class="fa fa-youtube"></span></a>
+                </div>
+                </div>
+            </div>
+
+            <div class="center section">
+                <h2>Contact Us</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fa fa-map-marker"></span>
+                        <span class="text"> New York, USA</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fa fa-phone"></span>
+                        <span class="text"> 0976543210</span>
+                    </div>
+                    <div class="email">
+                        <span class="fa fa-envelope"></span>
+                        <span class="text"> Mehsa.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right section">
+                <h2>Subscribe</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email*</div>
+                        </div>
+                        <input type="email" required>
+                        <div class="btn">
+                            <button type="submit">SUBSCRIBE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+        </div>
+    </footer>
+</div>
+</body>
+<script src="/app.js"></script>
+<script src="/show.js"></script>
+</html>
