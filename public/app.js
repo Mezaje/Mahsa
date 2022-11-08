@@ -37,7 +37,7 @@ const productshow=(pro)=>{
                 <img src=${item.metadata.Imgs} alt="">
                 <h3>${item.metadata.name}</h3>
                 <div class="card_details">
-                    <a href="Book/${item.filename}"><button><i class="fa-solid fa-magnifying-glass"></i></button></a>
+                    <a href="preview/${item.filename}"><button><i class="fa-solid fa-magnifying-glass"></i></button></a>
                 </div>
             </div>
         `)

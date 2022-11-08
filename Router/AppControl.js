@@ -135,7 +135,7 @@ module.exports.categorys =(async(req,res)=>{
     const category = await Category.find()
     res.render('cp/Category',{cat:category})
   } catch (error) {
-    res.send(error)
+    res.status.render('404')
   }
 })
 
@@ -194,12 +194,16 @@ module.exports.BooksList = (async(req,res)=>{
 module.exports.Book = (async(req,res)=>{
     Category.find().then((result)=>{
         res.render('Books',{cat:result})
+    }).catch((err)=>{
+      res.status(400).render('404')
     })
 })
 
 module.exports.BookTable = (async(req,res)=>{
   Category.find().then((result)=>{
       res.render('cp/BooksTables',{cat:result})
+  }).catch((err)=>{
+    res.status(404).render('404')
   })
 })
 
@@ -210,9 +214,13 @@ module.exports.contactus = async(req,res)=>{
 module.exports.BookDetails = (async(req,res)=>{
     const id = req.params.filename
     console.log(id)
-    const element = bucket.findOne({filename:id},((err,files)=>{
+    bucket.findOne({filename:id},((err,files)=>{
+      if(files){
         console.log(files)
         res.render('BookDetails',{files:files})
+      }else{
+        res.status(404).send('404')
+      }
     }))
 })
 

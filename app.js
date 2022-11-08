@@ -95,6 +95,8 @@ app.get('/About',(req,res)=>{
 app.get('/upload',requireAuthadmin,async(req,res)=>{
   Categorys.find().then((result)=>{
     res.render('cp/Upload',{cat:result})
+  }).catch(err=>{
+    res.status(404).render('404')
   })
     const file =  bucket.find()
     file.forEach(doc=> console.log(doc))
@@ -110,7 +112,11 @@ app.post("/upload",requireAuthadmin, upload.single("file"), (req, res) => {
     const Request = await RequestBook.find()
     console.log(student)
     bucket.find().toArray((err,files)=>{
-      res.render('cp/IndexAdmin',{book:files,std:student,Request})
+      if(files){
+        res.render('cp/IndexAdmin',{book:files,std:student,Request})
+      }else{
+        res.status(404).send('404')
+      }
   })
 })
 
@@ -118,5 +124,5 @@ app.post("/upload",requireAuthadmin, upload.single("file"), (req, res) => {
 app.use(router)
 
 app.use((req,res)=>{
-  res.status(404).send('404')
+  res.status(404).render('404')
 })

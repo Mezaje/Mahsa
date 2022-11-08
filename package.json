@@ -4,6 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "build": "npm install ./package.json",
+    "start": "nodemon app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,7 +16,7 @@
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
     "ejs": "^3.1.8",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "gridfs-stream": "^1.1.1",
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",

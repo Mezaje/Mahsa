@@ -5,8 +5,8 @@ const {requireAuth,requireAuthadmin,logincheck} = require('../views/middleware/a
 
 router.get('/BookList',control.BooksList)
 router.get('/Book',control.Book)
-router.get('/Book/:filename',requireAuth,control.BookDetails)
-router.get('/Book/Download/:filename',requireAuth,control.DownloadBook)
+router.get('/preview/:filename',requireAuth,control.BookDetails)
+router.get('/preview/Download/:filename',requireAuth,control.DownloadBook)
 router.get('/category',requireAuthadmin,control.categorys)
 router.get('/categorylist',requireAuthadmin,control.categorylist)
 
